@@ -169,7 +169,7 @@ mPC is an evaluation metric of robustness against out-of-distribution (OOD).
 - Cityscapes-C: ![cityacpes-c](./resources/table1.png)
 - DWD: 
 <p align="center">
-    <img src="./resources/table2.png" width="300"/>
+    <img src="./resources/table2.png" width="400"/>
 </p>
 
 
