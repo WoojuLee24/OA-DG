@@ -1,5 +1,8 @@
 # OA-DG: Object-Aware Domain Generalization
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/object-aware-domain-generalization-for-object/robust-object-detection-on-cityscapes-1)](https://paperswithcode.com/sota/robust-object-detection-on-cityscapes-1?p=object-aware-domain-generalization-for-object)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/object-aware-domain-generalization-for-object/robust-object-detection-on-dwd)](https://paperswithcode.com/sota/robust-object-detection-on-dwd?p=object-aware-domain-generalization-for-object)
+
 **_OA-DG_** is an effective method for single-domain object detection generalization (S-DGOD). It consists of two components: _OA-Mix_ for data augmentation and _OA-Loss_ for reducing domain gaps.
 
 ![oadg_introduction](./resources/oadg_introduction.gif)
@@ -155,6 +158,25 @@ python3 -u tools/train.py configs/oadg/cityscapes/oadg.py --work-dir data/oadg/c
         --weights data/oadg/cityscapes/oadg.pth
      ```
     </details>
+
+
+## Results
+We evaluated the robustness of our method for 
+common corruptions and various weather conditions in urban scenes.
+mPC is an evaluation metric of robustness against out-of-distribution (OOD).
+
+
+- Cityscapes-C: ![cityacpes-c](./resources/table1.png)
+- DWD: 
+<p align="center">
+    <img src="./resources/table2.png" width="300"/>
+</p>
+
+
+## TODO list
+- [x] Add instructions
+- [ ] Add codes
+- [ ] Pull request to MMDetection
 
 
 ## 📢 License
