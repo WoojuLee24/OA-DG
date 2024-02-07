@@ -173,7 +173,9 @@ mPC is an evaluation metric of robustness against out-of-distribution (OOD).
 
 ## TODO list
 - [x] Add instructions
-- [ ] Add codes
+- [x] Add codes
+- [ ] Add checkpoint files
+- [ ] Add configuration files for DWD
 - [ ] Pull request to MMDetection
 
 
