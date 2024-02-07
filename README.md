@@ -93,7 +93,16 @@ python3 -u tools/train.py $(CONFIG).py --work-dir $(WORK_DIR)
 <summary>Example: OA-DG trained on Cityscapes dataset</summary>
 
 ```bash
-python3 -u tools/train.py configs/oadg/cityscapes/oadg.py --work-dir data/oadg/cityscapes/oadg
+python3 -u tools/train.py configs/OA-DG/cityscapes/faster_rcnn_r50_fpn_1x_cityscapes_oadg.py --work-dir /ws/data/cityscapes/faster_rcnn_r50_fpn_1x_cityscapes_oadg
+```
+
+</details>
+
+<details onclose>
+<summary>Example: OA-DG trained on DWD dataset</summary>
+
+```bash
+python3 -u tools/train.py configs/OA-DG/dwd/faster_rcnn_r101_dc5_1x_dwd_oadg.py --work-dir /ws/data/dwd/faster_rcnn_r101_dc5_1x_dwd_oadg
 ```
 
 </details>
@@ -114,16 +123,16 @@ python3 -u tools/train.py configs/oadg/cityscapes/oadg.py --work-dir data/oadg/c
     
    ```bash
     python3 -u tools/analysis_tools/test_robustness.py \
-      configs/oadg/cityscapes/oadg.py \
-      data/oadg/cityscapes/oadg.pth \ 
-      --out data/oadg/cityscapes/oadg.pkl \
+      configs/OA-DG/cityscapes/faster_rcnn_r50_fpn_1x_cityscapes_oadg.py \
+      /ws/data/cityscapes/faster_rcnn_r50_fpn_1x_cityscapes_oadg/epoch_2.pth \ 
+      --out /ws/data/cityscapes/faster_rcnn_r50_fpn_1x_cityscapes_oadg/test_robustness_result_2epoch.pkl \
       --corruptions benchmark --eval bbox
    ```
     
     </details>
 
 
-- Diverse Weather Dataset (DWD) (TODO)
+- Diverse Weather Dataset (DWD)
 
    ```bash
     python3 -u tools/test_dwd.py \
@@ -135,29 +144,18 @@ python3 -u tools/train.py configs/oadg/cityscapes/oadg.py --work-dir data/oadg/c
     <summary>Example: OA-DG evaluated on DWD dataset</summary>
     
    ```bash
-    python3 -u tools/analysis_tools/test_robustness.py \
-      configs/oadg/cityscapes/oadg.py \
-      data/oadg/cityscapes/oadg.pth \ 
-      --out data/oadg/cityscapes/oadg.pkl \
-      --corruptions benchmark --eval bbox
+    python3 -u tools/analysis_tools/test_dwd.py \
+      configs/OA-DG/dwd/faster_rcnn_r101_dc5_1x_dwd_oadg.py \
+      /ws/data/dwd/faster_rcnn_r101_dc5_1x_dwd_oadg/epoch_10.pth \ 
+      --out /ws/data/dwd/faster_rcnn_r101_dc5_1x_dwd_oadg/test_robustness_result_10epoch.pkl \
+      --eval mAP
    ```
-    
     </details>
 
 
 ### Demo
 
-- You can also run `demo/image_demo.py`, which is the script provided by open-mmlab/mmdetection
-  
-    <details onclose>
-    <summary>Example: Object detection results in demo image using OA-DG</summary>
-    
-     ```bash
-     python3 demo/image_demo.py demo/demo.jpg \
-        configs/oadg/cityscapes/oadg.py \
-        --weights data/oadg/cityscapes/oadg.pth
-     ```
-    </details>
+You can run [demo](./demo/inference_demo.ipynb).
 
 
 ## Results
