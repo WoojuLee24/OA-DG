@@ -174,10 +174,9 @@ mPC is an evaluation metric of robustness against out-of-distribution (OOD).
 ## TODO list
 - [x] Add instructions
 - [x] Add codes
-- [ ] Add checkpoint files
-- [ ] Add configuration files for DWD
-- [ ] Pull request to MMDetection
-
+- [x] Add checkpoint files
+- [x] Add configuration files for DWD
+- [x] Pull request to MMDetection (Please click [here](https://github.com/open-mmlab/mmdetection/pull/11916#issue-2476810620) to review the pull request.)
 
 ## 📢 License
 
@@ -194,6 +193,15 @@ If you have any questions, please do not hesitate to contact us:
 ## 📎 Citation
 
 ```shell
+@inproceedings{lee2024object,
+  title={Object-Aware Domain Generalization for Object Detection},
+  author={Lee, Wooju and Hong, Dasol and Lim, Hyungtae and Myung, Hyun},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={4},
+  pages={2947--2955},
+  year={2024}
+}
 @misc{lee2023objectaware,
       title={Object-Aware Domain Generalization for Object Detection}, 
       author={Wooju Lee and Dasol Hong and Hyungtae Lim and Hyun Myung},
