@@ -152,7 +152,6 @@ python3 -u tools/train.py configs/OA-DG/dwd/faster_rcnn_r101_dc5_1x_dwd_oadg.py 
    ```
     </details>
 
-
 ### Demo
 
 You can run [demo](./demo/inference_demo.ipynb).
@@ -166,9 +165,90 @@ mPC is an evaluation metric of robustness against out-of-distribution (OOD).
 
 - Cityscapes-C: ![cityacpes-c](./resources/table1.png)
 - DWD: 
-<p align="center">
-    <img src="./resources/table2.png" width="400"/>
-</p>
+    <p align="center">
+        <img src="./resources/table2.png" width="400"/>
+    </p>
+
+    <details onclose>
+    <summary>☀️ Daytime-Sunny</summary>
+        
+    | Class     | GTs   | Dets   | Recall | AP        |
+    | --------- | ----- | ------ | ------ | --------- |
+    | aeroplane | 1738  | 9711   | 0.799  | 0.561     |
+    | bicycle   | 1046  | 6165   | 0.716  | 0.491     |
+    | bird      | 95339 | 325982 | 0.880  | 0.763     |
+    | boat      | 537   | 3151   | 0.702  | 0.462     |
+    | bottle    | 12309 | 76318  | 0.764  | 0.557     |
+    | bus       | 787   | 3410   | 0.654  | 0.489     |
+    | car       | 5029  | 28229  | 0.835  | 0.582     |
+    | **mAP**   |       |        |        | **0.558** |
+
+    </details>
+
+    <details onclose>
+    <summary>🌃 Night-Sunny</summary>
+
+    | Class     | GTs    | Dets    | Recall | AP        |
+    | --------- | ------ | ------- | ------ | --------- |
+    | aeroplane | 2012   | 15307   | 0.688  | 0.395     |
+    | bicycle   | 1410   | 9151    | 0.616  | 0.371     |
+    | bird      | 241616 | 1409587 | 0.846  | 0.639     |
+    | boat      | 665    | 13191   | 0.498  | 0.178     |
+    | bottle    | 17566  | 185415  | 0.710  | 0.439     |
+    | bus       | 841    | 4907    | 0.447  | 0.271     |
+    | car       | 4853   | 41633   | 0.714  | 0.412     |
+    | **mAP**   |        |         |        | **0.386** |
+
+    </details>
+
+    <details onclose>
+    <summary>🌧️ Dusk-Rainy</summary>
+
+    | Class     | GTs   | Dets   | Recall | AP        |
+    | --------- | ----- | ------ | ------ | --------- |
+    | aeroplane | 820   | 3953   | 0.604  | 0.382     |
+    | bicycle   | 322   | 2469   | 0.481  | 0.285     |
+    | bird      | 34240 | 180293 | 0.835  | 0.681     |
+    | boat      | 110   | 1508   | 0.336  | 0.132     |
+    | bottle    | 5144  | 27022  | 0.525  | 0.325     |
+    | bus       | 169   | 1186   | 0.331  | 0.214     |
+    | car       | 2235  | 13158  | 0.703  | 0.449     |
+    | **mAP**   |       |        |        | **0.353** |
+
+    </details>
+
+    <details onclose>
+    <summary>🌙 Night-Rainy</summary>
+
+    | Class     | GTs   | Dets   | Recall | AP        |
+    | --------- | ----- | ------ | ------ | --------- |
+    | aeroplane | 248   | 1158   | 0.468  | 0.289     |
+    | bicycle   | 121   | 1088   | 0.223  | 0.123     |
+    | bird      | 21655 | 174857 | 0.668  | 0.356     |
+    | boat      | 49    | 1635   | 0.143  | 0.010     |
+    | bottle    | 1532  | 20963  | 0.378  | 0.139     |
+    | bus       | 71    | 560    | 0.169  | 0.120     |
+    | car       | 499   | 4383   | 0.463  | 0.220     |
+    | **mAP**   |       |        |        | **0.180** |
+
+    </details>
+    
+    <details onclose>
+    <summary>🌫️ Daytime-Foggy</summary>
+
+    | Class     | GTs   | Dets  | Recall | AP        |
+    | --------- | ----- | ----- | ------ | --------- |
+    | aeroplane | 554   | 1882  | 0.493  | 0.324     |
+    | bicycle   | 4920  | 17470 | 0.500  | 0.324     |
+    | bird      | 33392 | 81460 | 0.714  | 0.626     |
+    | boat      | 911   | 4301  | 0.497  | 0.319     |
+    | bottle    | 21530 | 62759 | 0.527  | 0.420     |
+    | bus       | 2363  | 6609  | 0.530  | 0.426     |
+    | car       | 736   | 6068  | 0.497  | 0.267     |
+    | **mAP**   |       |       |        | **0.387** |
+
+    </details>
+
 
 
 ## TODO list
